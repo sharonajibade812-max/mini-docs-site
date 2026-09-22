@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "quarto-render.html",
+    "href": "quarto-render.html",
+    "title": "Rendering Markdown with Quarto",
+    "section": "",
+    "text": "Quarto takes a plain Markdown file and turns it into a Word document, a PDF, or a web page using a single command. This guide covers the Word conversion, which is useful when you want to draft in Markdown but submit a .docx."
+  },
+  {
+    "objectID": "quarto-render.html#what-you-need",
+    "href": "quarto-render.html#what-you-need",
+    "title": "Rendering Markdown with Quarto",
+    "section": "What You Need",
+    "text": "What You Need\n\nVS Code installed, with a project folder open (see VS Code and GitHub)\nQuarto installed\nA Markdown file to convert"
+  },
+  {
+    "objectID": "quarto-render.html#set-the-output-format",
+    "href": "quarto-render.html#set-the-output-format",
+    "title": "Rendering Markdown with Quarto",
+    "section": "1. Set the Output Format",
+    "text": "1. Set the Output Format\nQuarto reads instructions from a block at the very top of your file, marked off by three dashes on either side. This is called YAML, and it tells Quarto what to produce.\n---\ntitle: \"Your Document Title\"\nauthor: \"Your Name\"\nformat: docx\n---\nChange format: docx to format: html if you want a web page instead. Indentation matters in YAML, so paste this block rather than retyping it."
+  },
+  {
+    "objectID": "quarto-render.html#open-a-terminal",
+    "href": "quarto-render.html#open-a-terminal",
+    "title": "Rendering Markdown with Quarto",
+    "section": "2. Open a Terminal",
+    "text": "2. Open a Terminal\nThe terminal is where you type the render command. In VS Code, open the Terminal menu at the top of your screen and choose New Terminal. A panel opens along the bottom of the window with a blinking cursor."
+  },
+  {
+    "objectID": "quarto-render.html#run-the-render-command",
+    "href": "quarto-render.html#run-the-render-command",
+    "title": "Rendering Markdown with Quarto",
+    "section": "3. Run the Render Command",
+    "text": "3. Run the Render Command\nType this and press Enter, replacing yourfile.md with your own file name:\nquarto render yourfile.md\nIf your file name contains spaces or parentheses, wrap it in quotation marks.\nWhen it works, the terminal ends with a line reading Output created: followed by the new file name.\n\n\n\nTerminal output after a successful render."
+  },
+  {
+    "objectID": "quarto-render.html#open-the-result",
+    "href": "quarto-render.html#open-the-result",
+    "title": "Rendering Markdown with Quarto",
+    "section": "4. Open the Result",
+    "text": "4. Open the Result\nThe new file appears in the same folder as your Markdown source. Clicking it in the VS Code sidebar shows a message saying the file is binary and cannot be displayed. That is expected, because a .docx is not plain text. Right-click the file, choose Reveal in Finder, and open it from there."
+  },
+  {
+    "objectID": "quarto-render.html#add-images-to-your-project",
+    "href": "quarto-render.html#add-images-to-your-project",
+    "title": "Rendering Markdown with Quarto",
+    "section": "5. Add Images to Your Project",
+    "text": "5. Add Images to Your Project\nImages belong in a folder inside your project, usually named images. To move one in without leaving VS Code, open the File menu, click Open, and select the image. Its name appears as a tab at the top of the editor. Drag that tab down onto the images folder in the sidebar.\nThen reference it in your Markdown using the folder name and file name:\n![Caption text](images/example.png){fig-alt=\"Description for screen readers.\"}"
+  },
+  {
+    "objectID": "quarto-render.html#common-problems",
+    "href": "quarto-render.html#common-problems",
+    "title": "Rendering Markdown with Quarto",
+    "section": "Common Problems",
+    "text": "Common Problems\n\nquarto: command not found means Quarto is not installed. Install it from quarto.org, then close and reopen VS Code.\nNothing happens after the command. Check that you are in the right folder. The terminal shows the current folder name before the cursor.\nThe image does not appear. Confirm the file sits inside images, and that the name in your Markdown matches exactly, including capitals."
+  },
+  {
+    "objectID": "vscode-github.html",
+    "href": "vscode-github.html",
+    "title": "Getting Started with VS Code and GitHub",
+    "section": "",
+    "text": "This guide will help you set up the basic tools you need to create, manage, collaborate on, and publish documentation. You do not need prior coding experience. The goal is to understand the basic workflow rather than memorize every step."
+  },
+  {
+    "objectID": "vscode-github.html#install-vs-code",
+    "href": "vscode-github.html#install-vs-code",
+    "title": "Getting Started with VS Code and GitHub",
+    "section": "1. Install VS Code",
+    "text": "1. Install VS Code\nVisual Studio Code is a text editor that makes it easier to work with Markdown, HTML, and other plain-text files. Download and install the version for your operating system. If you are using an Iowa State laptop, admin settings may block the installer, so download it from Self Service instead.\nAfter installing VS Code, open the Extensions panel and install an extension such as Markdown All in One. Extensions add features to VS Code without requiring you to install a different program. See VS Code’s extension documentation if you need help.\n\n\n\nThe Extensions panel in VS Code with the Markdown All in One extension selected."
+  },
+  {
+    "objectID": "vscode-github.html#create-a-project-folder",
+    "href": "vscode-github.html#create-a-project-folder",
+    "title": "Getting Started with VS Code and GitHub",
+    "section": "2. Create a Project Folder",
+    "text": "2. Create a Project Folder\nEvery project lives in a folder on your computer. Create one wherever you keep your coursework, then open it in VS Code: click File, then Open Folder, and select your new folder.\nOpening the folder rather than a single file matters, because the sidebar then shows only that project, and any new file you create lands inside it.\nTo add a file, right-click the folder name in the sidebar and choose New File. Type the name with its extension, such as notes.md, and press Enter. The file opens empty on the right, ready for you to paste or type your content."
+  },
+  {
+    "objectID": "vscode-github.html#set-up-github",
+    "href": "vscode-github.html#set-up-github",
+    "title": "Getting Started with VS Code and GitHub",
+    "section": "3. Set Up GitHub",
+    "text": "3. Set Up GitHub\nCreate a free account at GitHub and install GitHub Desktop. GitHub stores repositories online, while GitHub Desktop gives you a visual interface for managing them. This lets you use version control without relying entirely on command-line Git. GitHub’s Hello World tutorial explains the basic concepts."
+  },
+  {
+    "objectID": "vscode-github.html#create-and-publish-a-repository",
+    "href": "vscode-github.html#create-and-publish-a-repository",
+    "title": "Getting Started with VS Code and GitHub",
+    "section": "4. Create and Publish a Repository",
+    "text": "4. Create and Publish a Repository\nCreate a public repository and open it in GitHub Desktop. At the top level, create a file named index.html. Add a link back to your repository:\n&lt;a href=\"YOUR-REPOSITORY-URL\"&gt;Link to repository&lt;/a&gt;\nSave the file. In GitHub Desktop:\n\nReview your changed files.\nWrite a short commit message.\nClick Commit to main.\nClick Push origin.\n\nA commit records a version of your work. Pushing sends those commits from your computer to GitHub."
+  },
+  {
+    "objectID": "vscode-github.html#publish-your-work",
+    "href": "vscode-github.html#publish-your-work",
+    "title": "Getting Started with VS Code and GitHub",
+    "section": "5. Publish Your Work",
+    "text": "5. Publish Your Work\nGitHub Pages turns files in a repository into a public website. For the full process, see Publishing with Pages."
+  },
+  {
+    "objectID": "vscode-github.html#collaborate-with-a-pull-request",
+    "href": "vscode-github.html#collaborate-with-a-pull-request",
+    "title": "Getting Started with VS Code and GitHub",
+    "section": "6. Collaborate with a Pull Request",
+    "text": "6. Collaborate with a Pull Request\nUse your repository’s Settings → Collaborators area to invite another person. Ask them to make a small change on a separate branch and submit a pull request. A pull request lets someone propose a change without immediately altering the main version of the project. Review their change, approve it, and merge it into main. See GitHub’s guide to creating pull requests."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Docs as Code Starter",
+    "section": "",
+    "text": "This site collects three short guides for anyone setting up a documentation workflow for the first time. Each one covers a step I worked through myself while learning these tools, and together they move from installing an editor to publishing a live site."
+  },
+  {
+    "objectID": "index.html#articles",
+    "href": "index.html#articles",
+    "title": "Docs as Code Starter",
+    "section": "Articles",
+    "text": "Articles\n\nVS Code and GitHub\nHow to install a text editor, create a GitHub account, and publish your first repository.\n\n\nRendering with Quarto\nHow to turn a Markdown file into a Word document or a web page using a single command.\n\n\nPublishing with Pages\nHow to take a Quarto site from your computer to a public URL using GitHub Pages."
+  }
+]

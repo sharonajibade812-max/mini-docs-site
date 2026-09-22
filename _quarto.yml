@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Docs as Code Starter"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: vscode-github.qmd
+        text: VS Code and GitHub
+      - href: quarto-render.qmd
+        text: Rendering with Quarto
+      - href: github-pages.qmd
+        text: Publishing with Pages
+
+format:
+  html:
+    theme: cosmo
+    toc: true
