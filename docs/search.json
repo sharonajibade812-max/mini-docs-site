@@ -105,6 +105,69 @@
     "text": "6. Collaborate with a Pull Request\nUse your repository’s Settings → Collaborators area to invite another person. Ask them to make a small change on a separate branch and submit a pull request. A pull request lets someone propose a change without immediately altering the main version of the project. Review their change, approve it, and merge it into main. See GitHub’s guide to creating pull requests."
   },
   {
+    "objectID": "github-pages.html",
+    "href": "github-pages.html",
+    "title": "Publishing a Quarto Site with GitHub Pages",
+    "section": "",
+    "text": "GitHub Pages turns the files in a repository into a public website at no cost. This guide covers publishing a Quarto site, picking up after your articles are written and your repository exists."
+  },
+  {
+    "objectID": "github-pages.html#what-you-need",
+    "href": "github-pages.html#what-you-need",
+    "title": "Publishing a Quarto Site with GitHub Pages",
+    "section": "What You Need",
+    "text": "What You Need\n\nA Quarto project with a _quarto.yml file (see Rendering with Quarto)\nA public GitHub repository (see VS Code and GitHub)\nGitHub Desktop installed"
+  },
+  {
+    "objectID": "github-pages.html#send-output-to-a-docs-folder",
+    "href": "github-pages.html#send-output-to-a-docs-folder",
+    "title": "Publishing a Quarto Site with GitHub Pages",
+    "section": "1. Send Output to a docs Folder",
+    "text": "1. Send Output to a docs Folder\nGitHub Pages publishes from either the top level of a repository or a folder named docs. Add this line to your _quarto.yml so Quarto puts the finished site where Pages can find it:\nproject:\n  type: website\n  output-dir: docs"
+  },
+  {
+    "objectID": "github-pages.html#render-the-whole-site",
+    "href": "github-pages.html#render-the-whole-site",
+    "title": "Publishing a Quarto Site with GitHub Pages",
+    "section": "2. Render the Whole Site",
+    "text": "2. Render the Whole Site\nOpen a terminal in your project folder and run:\nquarto render\nLeave off the file name this time. With a _quarto.yml present, Quarto builds every page in the project and reports the output as docs/index.html.\nTo check the result before publishing, run:\nopen docs/index.html"
+  },
+  {
+    "objectID": "github-pages.html#commit-and-push",
+    "href": "github-pages.html#commit-and-push",
+    "title": "Publishing a Quarto Site with GitHub Pages",
+    "section": "3. Commit and Push",
+    "text": "3. Commit and Push\nOpen GitHub Desktop and confirm the repository name at the top left. The file list will be long, because it includes every generated page, stylesheet, and script in the docs folder.\nWrite a short summary such as “Add site files, articles, and images,” click Commit to main, then click Push origin."
+  },
+  {
+    "objectID": "github-pages.html#turn-on-github-pages",
+    "href": "github-pages.html#turn-on-github-pages",
+    "title": "Publishing a Quarto Site with GitHub Pages",
+    "section": "4. Turn On GitHub Pages",
+    "text": "4. Turn On GitHub Pages\nOn github.com, open your repository and click Settings, then Pages in the left menu.\nUnder Build and deployment, the Source dropdown may already say GitHub Actions. Change it to Deploy from a branch, which is the simpler option for a site you render yourself. Then set the branch to main and the folder to /docs, and click Save.\n\n\n\nThe GitHub Pages settings, configured to deploy from the /docs folder on the main branch."
+  },
+  {
+    "objectID": "github-pages.html#confirm-the-deployment",
+    "href": "github-pages.html#confirm-the-deployment",
+    "title": "Publishing a Quarto Site with GitHub Pages",
+    "section": "5. Confirm the Deployment",
+    "text": "5. Confirm the Deployment\nDeployment takes a minute or two. To check it, open the Actions tab or your repository’s deployments page. A green checkmark next to github-pages means the site is live, and the URL appears beneath it.\nYour site address follows this pattern:\nhttps://USERNAME.github.io/REPOSITORY-NAME/"
+  },
+  {
+    "objectID": "github-pages.html#updating-the-site-later",
+    "href": "github-pages.html#updating-the-site-later",
+    "title": "Publishing a Quarto Site with GitHub Pages",
+    "section": "Updating the Site Later",
+    "text": "Updating the Site Later\nEditing an article takes three steps: change the .qmd file, run quarto render again, then commit and push. GitHub Pages redeploys automatically within a minute or two."
+  },
+  {
+    "objectID": "github-pages.html#common-problems",
+    "href": "github-pages.html#common-problems",
+    "title": "Publishing a Quarto Site with GitHub Pages",
+    "section": "Common Problems",
+    "text": "Common Problems\n\nOnly the README appears. The folder is set to root instead of /docs.\nWorkflow cards appear instead of branch dropdowns. The Source is still set to GitHub Actions.\nChanges do not show up. You pushed the .qmd files without running quarto render, so the HTML in docs is still the old version."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Docs as Code Starter",
